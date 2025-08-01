@@ -34,7 +34,7 @@ contract investre is Ownable, Pausable, ReentrancyGuard {
     event AutoBuyApproved(address indexed user, uint256 usdcAmount, address indexed router);
     
 
-    constructor(address _usdc) Ownable(msg.sender) {
+    constructor(address _usdc, address owner) Ownable(owner) {
         usdc = IERC20(_usdc);
     }
 
