@@ -143,19 +143,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "KYBERSWAP_ROUTER",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "OPENOCEAN_ID",
 				"outputs": [
 					{
@@ -169,7 +156,20 @@
 			},
 			{
 				"inputs": [],
-				"name": "OPENOCEAN_ROUTER",
+				"name": "_KYBERSWAP_ROUTER",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_OPENOCEAN_ROUTER",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -506,11 +506,11 @@
 			]
 		},
 		"Optimized.sol": {
-			"keccak256": "0x1e6afd78cbc7fc8381c7626b1ebe2a8b3f5f69f2c743749d5e5bcc25d7ecb014",
+			"keccak256": "0xbc6ad925cca54f8b933b61a74ceaee05521610ed96259cf7069d7940997b1fb3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2e110dca1dbdfa885833d898718391ee5b52c154a802cf721b444fc2e1d06a74",
-				"dweb:/ipfs/QmaHo2xKFGjNZpzZd3KQwZ58ywuh2gn9XU4DebqJ6cMwSV"
+				"bzz-raw://1444432c7ea6db311677a7354bd0083937c72342a52ff4c5eca6f698d30f0f36",
+				"dweb:/ipfs/QmehJhUsbeSbaNLu7ZAK6GdzGA3ii3BZtCFuM87UeFvLys"
 			]
 		}
 	},

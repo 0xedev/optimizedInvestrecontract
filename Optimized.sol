@@ -21,8 +21,8 @@ contract investreAutoBuy is Ownable, Pausable, ReentrancyGuard {
     IERC20 public immutable usdc;
 
     // Hard-coded trusted DEX routers (Base mainnet)
-    address public constant OPENOCEAN_ROUTER = 0x6352a56caadC4F1E25CD6c75970Fa768A3304e64;
-    address public constant KYBERSWAP_ROUTER = 0x6131B5fae19EA4f9D964eAc0408E4408b66337b5;
+    address public constant _OPENOCEAN_ROUTER = 0x6352a56caadC4F1E25CD6c75970Fa768A3304e64;
+    address public constant _KYBERSWAP_ROUTER = 0x6131B5fae19EA4f9D964eAc0408E4408b66337b5;
 
     // Router IDs for gas-efficient function calls
     uint8 public constant OPENOCEAN_ID = 0;
@@ -48,9 +48,9 @@ contract investreAutoBuy is Ownable, Pausable, ReentrancyGuard {
     ) external onlyOwner whenNotPaused nonReentrant {
         address router;
         if (routerId == OPENOCEAN_ID) {
-            router = OPENOCEAN_ROUTER;
+            router = _OPENOCEAN_ROUTER;
         } else if (routerId == KYBERSWAP_ID) {
-            router = KYBERSWAP_ROUTER;
+            router = _KYBERSWAP_ROUTER;
         } else {
             revert("Invalid router ID");
         }
@@ -73,9 +73,9 @@ contract investreAutoBuy is Ownable, Pausable, ReentrancyGuard {
         for (uint256 i = 0; i < users.length; i++) {
             address router;
             if (routerIds[i] == OPENOCEAN_ID) {
-                router = OPENOCEAN_ROUTER;
+                router = _OPENOCEAN_ROUTER;
             } else if (routerIds[i] == KYBERSWAP_ID) {
-                router = KYBERSWAP_ROUTER;
+                router = _KYBERSWAP_ROUTER;
             } else {
                 revert("Invalid router ID");
             }
@@ -105,9 +105,9 @@ contract investreAutoBuy is Ownable, Pausable, ReentrancyGuard {
      */
     function getRouterAddress(uint8 routerId) external pure returns (address) {
         if (routerId == OPENOCEAN_ID) {
-            return OPENOCEAN_ROUTER;
+            return _OPENOCEAN_ROUTER;
         } else if (routerId == KYBERSWAP_ID) {
-            return KYBERSWAP_ROUTER;
+            return _KYBERSWAP_ROUTER;
         } else {
             revert("Invalid router ID");
         }
@@ -118,7 +118,7 @@ contract investreAutoBuy is Ownable, Pausable, ReentrancyGuard {
      * @return OpenOcean router address
      */
     function getOpenOceanRouter() external pure returns (address) {
-        return OPENOCEAN_ROUTER;
+        return _OPENOCEAN_ROUTER;
     }
 
     /**
@@ -126,6 +126,6 @@ contract investreAutoBuy is Ownable, Pausable, ReentrancyGuard {
      * @return KyberSwap router address
      */
     function getKyberSwapRouter() external pure returns (address) {
-        return KYBERSWAP_ROUTER;
+        return _KYBERSWAP_ROUTER;
     }
 }
