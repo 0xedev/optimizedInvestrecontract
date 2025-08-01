@@ -414,7 +414,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Optimized.sol": "investreAutoBuy"
+			"Optimized.sol": "investre"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -469,11 +469,11 @@
 			]
 		},
 		"Optimized.sol": {
-			"keccak256": "0x5798369b041f7a3d915a34fd12112857b47c236b780fc4de1c5e6e3127e7619d",
+			"keccak256": "0xfa3256b7b4a2146f7fb322e907f04879007b21a7917b2cf182fbc5ed89ace9b8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5e7b7033c49424ab01ba62a960c62f4356ecc93741c9768896a375379befa15d",
-				"dweb:/ipfs/QmUw9Z8onMLLnCxDe4L8ziphRSqXJNqWA29Cpxzks9tQ7f"
+				"bzz-raw://ef0302fbd9012059ed27c134f6987cf26a5f7c6fc42460910b1a26635828c630",
+				"dweb:/ipfs/QmZzc9CeF15MN7A8Uw9MhU4ew3RUsByxiN1m83oUCjczaU"
 			]
 		}
 	},
